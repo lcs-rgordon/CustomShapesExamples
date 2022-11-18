@@ -24,11 +24,34 @@ struct Diagonal: Shape {
     
 }
 
+struct Diamond: Shape {
+    
+    func path(in rect: CGRect) -> Path {
+        
+        // The path that describes the shape!
+        var path = Path()
+        
+        // Here is where we'd describe the shape...
+        // TO BE IMPLEMENTED
+        
+        // Send back (return) the path that describes the shape
+        return path
+        
+    }
+    
+    
+}
 
 struct ContentView: View {
     var body: some View {
-        Diagonal()
-            .stroke()
+        
+        VStack {
+            Diagonal()
+                .stroke()
+            
+            Diamond()
+                .stroke()
+        }
     }
 }
 
